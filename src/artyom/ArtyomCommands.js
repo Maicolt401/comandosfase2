@@ -11,22 +11,16 @@ export default class ArtyomCommandsManager {
 
     return Artyom.addCommands([
       {
-        indexes: ["Hello", "Hi"],
+        indexes: ["hello", "hi"],
         action: () => {
           Artyom.say("Hello, how are you?");
         },
       },
       {
-        indexes: ["what's your name?"],
-        action: () => {
-          Artyom.say("my name is jarvis and you ?");
-        },
-      },
-      {
-        indexes: ["my name is michael"],
+        indexes: [/How are you/, /Regular expressions supported/],
         smart: true,
         action: () => {
-          Artyom.say("nice to meet you");
+          Artyom.say("I'm fine, thanks for asking !");
         },
       },
       {
