@@ -6,11 +6,9 @@ export default class ArtyomCommandsManager {
     this._artyom = ArtyomInstance;
   }
 
-  // Execute the loadCommands method to inject the methods to the instance of Artyom
   loadCommands() {
     let Artyom = this._artyom;
 
-    // Here you can load all the commands that you want to Artyom
     return Artyom.addCommands([
       {
         indexes: ["Hello", "Hi"],
@@ -19,10 +17,16 @@ export default class ArtyomCommandsManager {
         },
       },
       {
-        indexes: [/How are you/, /Regular expressions supported/],
+        indexes: ["what's your name?"],
+        action: () => {
+          Artyom.say("my name is jarvis and you ?");
+        },
+      },
+      {
+        indexes: ["my name is michael"],
         smart: true,
         action: () => {
-          Artyom.say("I'm fine, thanks for asking !");
+          Artyom.say("nice to meet you");
         },
       },
       {
