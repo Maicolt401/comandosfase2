@@ -47,7 +47,7 @@ export default class App extends React.Component {
         // Display loaded commands in the console
         console.log(Jarvis.getAvailableCommands());
 
-        Jarvis.say("Hello there, how are you?");
+        Jarvis.say("welcome to maicol's virtual assistant, my name is apollo");
 
         _this.setState({
           artyomActive: true,
